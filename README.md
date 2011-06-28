@@ -3,6 +3,9 @@
 jquery.hashwatcher.js allow bind custom handlers that will fired on 
 changing key hashes in user browser address bar.
 
+jquery.hashwatcher.js depends on [jquery-hashchange](https://github.com/cowboy/jquery-hashchange).
+So, be sure insert it before inside the head section on html page.
+
 There are **watch** and **neglect** methods.
 
 ## watch ##
@@ -33,12 +36,13 @@ Handler allows invoke callbacks when hash key
 Gets an hash key value. Will return something valuable only of value is set.
 To check existence of hash key in url, despite of its value, try method exists.
 
+Bind two handler to the same hash key and unbind first of them by handler uid.
 #### example 1: ####
     var hUid1 = $(window).hashwatcher('watch', {hashKey:'status', ...});
     var hUid2 = $(window).hashwatcher('watch', {hashKey:'status', ...});
     $(window).hashwatcher('neglect', 'status', hUid1);
 
-
+This piece of code will unbind all the existing handlers for 'status' hash key.
 #### example 2: ####
     $(window).hashwatcher('neglect', 'status');
 
