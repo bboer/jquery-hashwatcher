@@ -12,7 +12,7 @@ than one handlers to the same hash key.
 Handler allows invoke callbacks when hash key 
 *appearing* in url, *disappearing* and when its value *changed*.
 
-#### example 1: ####
+#### example: ####
     $(window).hashwatcher('watch', {
         hashKey: 'status',
         onAppear: function(hashValue) {
@@ -33,7 +33,7 @@ Handler allows invoke callbacks when hash key
 Gets an hash key value. Will return something valuable only of value is set.
 To check existence of hash key in url, despite of its value, try method exists.
 
-#### example ####
+#### example1: ####
     var hUid1 = $(window).hashwatcher('watch', {hashKey:'status', ...});
     var hUid2 = $(window).hashwatcher('watch', {hashKey:'status', ...});
     $(window).hashwatcher('neglect', 'status', hUid1);
