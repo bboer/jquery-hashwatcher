@@ -33,7 +33,7 @@ Handler allows invoke callbacks when hash key
 Gets an hash key value. Will return something valuable only of value is set.
 To check existence of hash key in url, despite of its value, try method exists.
 
-#### example1: ####
+#### example 1: ####
     var hUid1 = $(window).hashwatcher('watch', {hashKey:'status', ...});
     var hUid2 = $(window).hashwatcher('watch', {hashKey:'status', ...});
     $(window).hashwatcher('neglect', 'status', hUid1);
