@@ -172,7 +172,7 @@
         // Remove handler with certain uid from watching list.
         // uid is optional. If not passed, all handlers for
         // passed hash key will be removed.
-        unwatch: function(hashKey, uid) {
+        neglect: function(hashKey, uid) {
             if (hashKey) {
                 handlersKeeper.remove(hashKey, uid);
             } else {
